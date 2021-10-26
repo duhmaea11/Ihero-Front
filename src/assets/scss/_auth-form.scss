@@ -1,0 +1,44 @@
+@import './variables';
+
+.auth-form {
+  width: 40%;
+  display: flex;
+  max-width: 450px;
+  padding: 22px 20px;
+  border-radius: 10px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 3px 22px 1px #00000069;
+
+  @media (max-width: $sm) {
+    width: 80%;
+  }
+
+  > div {
+    @extend .form-group;
+  }
+
+  > section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    > button {
+      width: 100%;
+      margin-bottom: 1rem;
+      @extend .btn-primary;
+      background: $primary-gradient !important;
+    }
+
+    > a {
+      cursor: pointer;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+}

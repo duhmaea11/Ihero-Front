@@ -1,0 +1,22 @@
+<section id="login">
+  <div>
+    <fa-icon [icon]="icon.faMask"></fa-icon>
+    <h3>Bem vindo a central de heróis</h3>
+    <small>Faça login para nos ajudar em combate</small>
+  </div>
+
+  <article>
+    <div>
+      <label>Email</label>
+      <input type="text" name="email" id="email" [(ngModel)]="login.email" />
+    </div>
+    <div>
+      <label>Senha</label>
+      <input type="password" name="password" id="password" [(ngModel)]="login.password"/>
+    </div>
+    <section>
+      <button (click)="handleLogin()">Login</button>
+      <a (click)="goToRegister()">Cadastre-se</a>
+    </section>
+  </article>
+</section>

@@ -1,0 +1,40 @@
+@import "./variables";
+
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 10px 6px;
+  border-radius: $border-radius;
+}
+
+.btn-primary {
+  @extend .btn;
+  color: #fff;
+  background: $color-primary;
+
+  &:hover {
+    background: darken($color-primary, 10%);
+  }
+}
+
+.btn-secondary {
+  @extend .btn;
+  color: #fff !important;
+  background: $color-secondary !important;
+
+  &:hover {
+    background: darken($color-secondary, 10%) !important;
+  }
+}
+
+.icon-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: $text-color;
+  background: transparent;
+
+  &:hover {
+    color: $color-primary;
+  }
+}

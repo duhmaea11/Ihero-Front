@@ -1,0 +1,33 @@
+@import "../../../assets/scss/custom";
+
+#login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadein 4s;
+
+  > div {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    > fa-icon {
+      font-size: 4rem;
+      color: $color-secondary;
+    }
+
+    > h3,
+    > small {
+      margin-top: 0px;
+      margin-bottom: 4px;
+    }
+  }
+
+  > article {
+    @extend .auth-form;
+  }
+}

@@ -1,0 +1,21 @@
+$text-color: #fff;
+$body-bg: #303030;
+
+$color-primary: #845ec2;
+$color-secondary: #d65db1;
+
+$pink: #ff6f91;
+$salmon: #ff9671;
+$orange: #ffc75f;
+$yellow: #f9f871;
+
+$sm: 576px;
+
+$primary-gradient: linear-gradient(
+  90deg,
+  #{$color-primary} 0%,
+  #{$color-secondary} 50%,
+  #{$pink} 100%
+);
+
+$border-radius: 8px;

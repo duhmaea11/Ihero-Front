@@ -1,0 +1,60 @@
+@import "../../../assets/scss/custom";
+
+#hero {
+  > nav {
+    @extend .container;
+
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    background: $primary-gradient;
+
+    > article {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      > button {
+        $padding-x: 2rem;
+
+        @extend .btn-primary;
+        padding-left: $padding-x;
+        padding-right: $padding-x;
+      }
+    }
+
+    > div {
+      width: 50%;
+      @extend .form-group;
+
+      @media (max-width: $sm) {
+        width: 100%;
+      }
+    }
+  }
+
+  > section {
+    @extend .container;
+
+    > table {
+      background: $body-bg;
+      position: relative;
+      bottom: 1.5rem;
+      @extend .table;
+
+      td {
+        > article {
+          display: flex;
+          justify-content: center;
+
+          > button {
+            $padding-x: 12px;
+            padding-left: $padding-x;
+            padding-right: $padding-x;
+            
+            @extend .icon-button;
+          }
+        }
+      }
+    }
+  }
+}

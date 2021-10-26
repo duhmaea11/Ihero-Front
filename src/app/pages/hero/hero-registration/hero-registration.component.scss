@@ -1,0 +1,49 @@
+@import "../../../../assets/scss/custom";
+
+#heroRegistration {
+  > nav {
+    @extend .container;
+
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    background: $primary-gradient;
+
+    > article {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      > div {
+        > button {
+          $padding-x: 2rem;
+
+          @extend .btn-primary;
+          padding-left: $padding-x !important;
+          padding-right: $padding-x !important;
+
+          &:first-of-type {
+            margin-right: 8px;
+            background: $orange !important;
+          }
+        }
+      }
+    }
+  }
+
+  > section {
+    @extend .container;
+
+    > article {
+      @extend .box-content;
+
+      > div {
+        width: 50%;
+        @extend .form-group;
+
+        @media (max-width: $sm) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

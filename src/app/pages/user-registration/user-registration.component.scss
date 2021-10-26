@@ -1,0 +1,12 @@
+@import "../../../assets/scss/custom";
+
+#user-registration {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > article {
+    @extend .auth-form;
+  }
+}

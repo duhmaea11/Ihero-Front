@@ -1,0 +1,30 @@
+<section id="heroPaginator">
+    <div>
+        <label>Itens por página</label>
+        <select name="pageSize" [(ngModel)]="paginationConfig.pageSize">
+            <option *ngFor="let item of itemsPerPage" [value]="item">{{item}}</option>
+        </select>
+    </div>
+
+    <article>
+        {{linesPerPage}} de {{paginationConfig.collectionSize}}
+    </article>
+
+    <section>
+        <button (click)="prevAll()">
+            <fa-icon [icon]="icon.stepBackward"></fa-icon>
+        </button>
+
+        <button (click)="prevPage()">
+            <fa-icon [icon]="icon.angleLeft"></fa-icon>
+        </button>
+
+        <button (click)="nextPage()">
+            <fa-icon [icon]="icon.angleRight"></fa-icon>
+        </button>
+
+        <button (click)="nextAll()">
+            <fa-icon [icon]="icon.stepForward"></fa-icon>
+        </button>
+    </section>
+</section>

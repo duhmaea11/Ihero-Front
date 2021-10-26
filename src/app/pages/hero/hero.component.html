@@ -1,0 +1,52 @@
+<section id="hero">
+  <nav>
+    <article>
+      <h2>Heróis</h2>
+      <button (click)="goToRegister()">Adicionar</button>
+    </article>
+
+    <div>
+      <input type="text" placeholder="Digite o nome..." [(ngModel)]="filterText"/>
+    </div>
+  </nav>
+
+  <section>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Nome</th>
+          <th class="text-center">Ranking</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let hero of filteredHero; let index = index">
+          <td width="5%" class="text-center">{{ index + 1 }}</td>
+          <td width="70%">{{ hero.name }}</td>
+          <td class="text-center">{{ hero.ranking }}</td>
+          <td>
+            <article>
+              <button (click)="removeHero(hero.id, index)">
+                <fa-icon [icon]="icon.faTrash"></fa-icon>
+              </button>
+
+              <button (click)="goToEdit(hero.id)">
+                <fa-icon [icon]="icon.faPencilAlt"></fa-icon>
+              </button>
+            </article>
+          </td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <td colspan="5">
+          <paginator-component
+            [paginationConfig]="pagination"
+          ></paginator-component>
+        </td>
+      </tfoot>
+    </table>
+  </section>
+</section>

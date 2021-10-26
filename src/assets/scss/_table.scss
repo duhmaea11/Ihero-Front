@@ -1,0 +1,33 @@
+@import "./variables";
+
+.table {
+  width: 100%;
+  padding: 0px 14px;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border-radius: $border-radius;
+  box-shadow: 0px 3px 22px 1px #00000069;
+  
+  > thead {
+    th {
+      padding: 0.75rem;
+      vertical-align: bottom;
+      text-align: start ;
+    }
+  }
+
+  > tbody {
+    tr {
+      &:hover {
+        background: lighten($body-bg, 10%);
+      }
+    }
+  }
+
+  td {
+    cursor: default;
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+}

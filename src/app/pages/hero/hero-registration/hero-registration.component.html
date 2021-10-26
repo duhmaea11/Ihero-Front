@@ -1,0 +1,30 @@
+<section id="heroRegistration">
+  <nav>
+    <article>
+      <h2>Cadastro de herói</h2>
+
+      <div>
+        <button (click)="backToList()">Voltar</button>
+        <button (click)="save()">Salvar</button>
+      </div>
+    </article>
+  </nav>
+
+  <section>
+    <article>
+      <div>
+        <label>Nome</label>
+        <input type="text" name="name" id="name" [(ngModel)]="hero.name" />
+      </div>
+
+      <div>
+        <label>Ranking</label>
+        <select name="ranking" id="ranking" [(ngModel)]="hero.ranking">
+          <option *ngFor="let ranking of rankingL" [value]="ranking">
+            {{ ranking }}
+          </option>
+        </select>
+      </div>
+    </article>
+  </section>
+</section>

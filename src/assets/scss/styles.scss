@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@200&display=swap');
+@import './variables';
+
+html {
+    position: relative;
+}
+
+html,
+body {
+    min-height: 100%;
+    line-height: 1.5;
+    color: $text-color;
+    margin: 0px !important;
+    background-color: $body-bg;
+    font-family: 'Saira Condensed', sans-serif !important;
+
+    &.hidden-scroll {
+        overflow: hidden;
+    }
+}

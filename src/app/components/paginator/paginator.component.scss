@@ -1,0 +1,68 @@
+$max-height-footer-tb: 40px;
+@import '../../../assets/scss/custom'; 
+
+.text-pagination {
+    align-items: center;
+    font-weight: 600;    
+    font-size: 14px;
+    display: flex;
+}
+
+#heroPaginator {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end ;
+    height: $max-height-footer-tb;
+    
+    @media (max-width: $sm) {
+        justify-content: space-between;
+
+        > div {
+            max-width: 20%;
+        }
+    }
+
+    > div {
+        @extend .form-group;
+        height: $max-height-footer-tb;
+        margin-bottom: 0px !important;
+        flex-direction: row !important;
+        max-width: 15%;
+
+        > label {
+            @extend .text-pagination;
+
+            color: $text-color;
+            margin-right: 1rem;
+            white-space: nowrap;
+            height: $max-height-footer-tb;
+        }
+        
+        > select {
+            border-radius: 5px;
+            border: 2px solid #333333;
+        }
+    }
+    
+    > article {
+        @extend .text-pagination;
+        margin-right: 12px;
+        color: $text-color;
+        height: $max-height-footer-tb;
+    }
+
+    > section {
+        > button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: $text-color;
+            background: transparent;
+            height: $max-height-footer-tb;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+}
